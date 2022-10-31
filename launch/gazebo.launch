@@ -1,0 +1,21 @@
+<launch>
+  <arg name="competition_arena"/>
+  <include
+    file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch" />
+  <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_link base_footprint 40" />
+  <node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-file $(find Robot_Assembly)/urdf/robot_final.urdf -urdf -model Robot_Assembly"
+    output="screen" />
+  <node
+    name="fake_joint_calibration"
+    pkg="rostopic"
+    type="rostopic"
+    args="pub /calibrated std_msgs/Bool true" />
+</launch>

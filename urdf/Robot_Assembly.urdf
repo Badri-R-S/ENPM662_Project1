@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+   name="662_bot">
+  <link 
+    name="dummy_link">
+  </link>
+  <joint
+    name="dummy_joint"
+    type="fixed">
+    <parent
+      link="dummy_link" />
+    <child
+      link="base_link" />
+  </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="57.7200890207757" />
+      <inertia
+        ixx="1.2991331467901"
+        ixy="-3.57075255988714E-16"
+        ixz="0.206009660815117"
+        iyy="4.53263349681224"
+        iyz="-1.6306400674182E-16"
+        izz="5.55276261813866" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Assembly/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Assembly/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rear_wheel_left">
+    <inertial>
+      <origin
+        xyz="1.11022302462516E-16 0 -0.0418411207692297"
+        rpy="0 0 0" />
+      <mass
+        value="2.25128553479309" />
+      <inertia
+        ixx="0.00778450520341825"
+        ixy="-2.09007861276836E-18"
+        ixz="1.5689055811651E-18"
+        iyy="0.00778450520341825"
+        iyz="6.86162569773148E-19"
+        izz="0.0121750679482056" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Assembly/meshes/rear-wheel-left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Assembly/meshes/rear-wheel-left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_wheel_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.254 0.33528 0.1016"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_wheel_left" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="rear_wheel_right">
+    <inertial>
+      <origin
+        xyz="1.11022302462516E-16 0 -0.0418411207692296"
+        rpy="0 0 0" />
+      <mass
+        value="2.25128553479309" />
+      <inertia
+        ixx="0.00778450520341824"
+        ixy="-2.94807170313899E-18"
+        ixz="2.0588996653005E-18"
+        iyy="0.00778450520341824"
+        iyz="-1.91756268618991E-18"
+        izz="0.0121750679482055" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Assembly/meshes/rear-wheel-right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Assembly/meshes/rear-wheel-right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_wheel_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.254 -0.33528 0.1016"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_wheel_right" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="front_wheel_left_steering">
+    <inertial>
+      <origin
+        xyz="-2.22044604925031E-16 0 -0.148810521697732"
+        rpy="0 0 0" />
+      <mass
+        value="1.36260899137695" />
+      <inertia
+        ixx="0.00648079554945431"
+        ixy="-0.000491370725122072"
+        ixz="-9.2798838919083E-18"
+        iyy="0.00832913379680573"
+        iyz="2.63427219891982E-18"
+        izz="0.00404982823146118" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Assembly/meshes/front-wheel-left-steering.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Assembly/meshes/front-wheel-left-steering.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_wheel_left_steering_joint"
+    type="continuous">
+    <origin
+      xyz="0.254 0.37592 0.30607"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_wheel_left_steering" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="front_wheel_left">
+    <inertial>
+      <origin
+        xyz="-0.00921693241436478 -1.11022302462516E-16 -0.0369683399257938"
+        rpy="0 0 0" />
+      <mass
+        value="1.7786506153732" />
+      <inertia
+        ixx="0.00663099373913342"
+        ixy="2.19864606816595E-18"
+        ixz="0.00108873765653927"
+        iyy="0.00635955008173795"
+        iyz="-2.12709494518011E-18"
+        izz="0.0107263851595592" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Assembly/meshes/front-wheel-left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Assembly/meshes/front-wheel-left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_wheel_left_joint"
+    type="continuous">
+    <origin
+      xyz="0.036968 0.0092169 -0.20828"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="front_wheel_left_steering" />
+    <child
+      link="front_wheel_left" />
+    <axis
+      xyz="0.24191 0 0.9703" />
+  </joint>
+  <link
+    name="front_wheel_right_steering">
+    <inertial>
+      <origin
+        xyz="-4.44089209850063E-16 -1.38777878078145E-17 -0.148810521697732"
+        rpy="0 0 0" />
+      <mass
+        value="1.36260899137696" />
+      <inertia
+        ixx="0.00636320999468119"
+        ixy="0.000101395012660662"
+        ixz="-6.30188725889053E-18"
+        iyy="0.0084467193515789"
+        iyz="-3.16026172422355E-19"
+        izz="0.00404982823146119" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Assembly/meshes/front-wheel-right-steering.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Assembly/meshes/front-wheel-right-steering.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_wheel_right_steering_joint"
+    type="continuous">
+    <origin
+      xyz="0.254 -0.37592 0.30607"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_wheel_right_steering" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_wheel_right">
+    <inertial>
+      <origin
+        xyz="0.00184760846713564 0 -0.0380551749825457"
+        rpy="0 0 0" />
+      <mass
+        value="1.7786506153732" />
+      <inertia
+        ixx="0.00637045762088019"
+        ixy="1.91905902112303E-19"
+        ixz="-0.000224662485624304"
+        iyy="0.00635955008173793"
+        iyz="-7.24196626290174E-19"
+        izz="0.0109869212778124" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Assembly/meshes/front-wheel-right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Assembly/meshes/front-wheel-right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_wheel_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.038055 0.0018476 -0.20828"
+      rpy="1.5708 0 -1.5708" />
+    <parent
+      link="front_wheel_right_steering" />
+    <child
+      link="front_wheel_right" />
+    <axis
+      xyz="-0.048494 0 0.99882" />
+  </joint>
+  <transmission name="rear_wheel_left_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rear_wheel_left_joint">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rear_wheel_left_motor">
+    <mechanicalReduction>50</mechanicalReduction>
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="rear_wheel_right_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rear_wheel_right_joint">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rear_wheel_right_motor">
+    <mechanicalReduction>50</mechanicalReduction>
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="front_wheel_left_steering_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="front_wheel_left_steering_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_wheel_left_steering_motor">
+    <mechanicalReduction>50</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="front_wheel_left_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="front_wheel_left_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_wheel_left_motor">
+    <mechanicalReduction>50</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="front_wheel_right_steering_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="front_wheel_right_steering_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_wheel_right_steering_motor">
+    <mechanicalReduction>50</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="front_wheel_right_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="front_wheel_right_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_wheel_right_motor">
+    <mechanicalReduction>50</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <!--<transmission name="laser_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="laser_joint">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="laser_motor">
+    <mechanicalReduction>50</mechanicalReduction>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission> -->
+</robot>
